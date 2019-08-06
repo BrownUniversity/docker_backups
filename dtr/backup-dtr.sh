@@ -5,13 +5,13 @@ source /opt/local/dckr-backup/config.conf
 mkdir -p ${BACKUP_DIR} >/dev/null 2>&1
 
 # Docker DTR info
-DTR-ID=$(docker ps --format '{{.Names}}' -f name=dtr-rethink | cut -f 3 -d '-')
+DTR_ID=$(docker ps --format '{{.Names}}' -f name=dtr-rethink | cut -f 3 -d '-')
 DTR_VERSION=$(docker container inspect $(docker container ps -f name=dtr-registry -q) | grep -m1 -Po '(?<=DTR_VERSION=)\d.\d.\d')
 REPLICA_ID=$(docker ps --format '{{.Names}}' -f name=dtr-rethink | cut -f 3 -d '-')
 
 # Backup image content
 tar -cf ${BACKUP_DIR}/dtr-image-backup-${DATE}.tar \
-/var/lib/docker/volumes/dtr-registry-${DTR-ID}
+/var/lib/docker/volumes/dtr-registry-${DTR_ID}
 
 # Backup metadata
 docker run --log-driver none -i --rm \
