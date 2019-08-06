@@ -1,5 +1,5 @@
 #!/bin/bash
-source /opt/local/dckr-backup/config.conf
+source /opt/local/docker-backup/config.conf
 
 # Prep backup_dir
 mkdir -p ${BACKUP_DIR} >/dev/null 2>&1
