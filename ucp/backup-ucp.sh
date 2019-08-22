@@ -6,7 +6,7 @@ mkdir -p ${BACKUP_DIR} >/dev/null 2>&1
 
 # Get instance ID
 UCP_INSTANCE=$(docker info 2>/dev/null |grep ClusterID|awk '{print $NF}')
-UCP_VERSION=$(docker container inspect $(docker container ps -f name=ucp-controller -q) |  grep -m1 -Po '(?<="com\.docker\.ucp\.version": )"\d.\d.\d"')
+UCP_VERSION=$(docker container inspect $(docker container ps -f name=ucp-controller -q) |  grep -m1 -Po '(?<="com\.docker\.ucp\.version": )"\d.\d.\d"') | tr -d '"'
 
 # Create a backup, encrypt it, and store it on /tmp/backup.tar
 docker container run \
