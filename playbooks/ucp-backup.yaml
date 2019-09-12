@@ -1,0 +1,15 @@
+---
+- hosts: "{{ target_hosts | default('none') }}"
+  become: true
+  vars: 
+    scriptdir: /opt/local/docker_backups
+  environment:
+    PATH: "/bin:/sbin:/usr/bin:/usr/sbin:/opt/puppetlabs/bin"
+  tasks:
+  - name: run SWARM backup
+    run_once: true
+    command: "{{ scriptdir }}/swarm/backup-swarm.sh"
+
+  - name: run UCP backup
+    run_once: true
+    command: "{{ scriptdir }}/ucp/backup-ucp.sh"

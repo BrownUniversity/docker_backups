@@ -8,6 +8,9 @@ These are scripts that will backup the UCP, DTR, and the Swarm.
 * backup-swarm.sh - Stop docker and backup swarm, Runs on UCP
 * backup-ucp.sh - Backup UCP config with no passphase, Runs on UCP
 * backup-dtr.sh - Backup image content and DTR configs, Runs on DTR
+* intentory - docker cluster ansible inventory file
+* playbooks - ansible playbooks for backups
+
 
 ## Order of backups
 

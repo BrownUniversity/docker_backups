@@ -1,0 +1,10 @@
+---
+- hosts: "{{ target_hosts | default('none') }}"
+  become: true
+  vars: 
+    scriptdir: /opt/local/docker_backups
+  environment:
+    PATH: "/bin:/sbin:/usr/bin:/usr/sbin:/opt/puppetlabs/bin"
+  tasks:
+  - name: run script on remote system
+    command: "{{ scriptdir }}/dtr/backup-dtr.sh"
