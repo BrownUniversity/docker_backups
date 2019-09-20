@@ -1,10 +1,10 @@
 # Instance configs
 DATE=`date +"%m%d%Y"`
 BACKUP_ROOT=/srv/docker_backups
-UCP_URL=ucp.services.brown.edu
+UCP_URL=[ucp/ucpint].[cis-qas/services].brown.edu
 UCP_ADMIN=admin
 UCP_PASSWORD=
 SERVICE=`facter service`
 ENV=`facter env`
-DCKR_INSTANCE=${SERVICE}_${ENV}
+DCKR_INSTANCE=[int/dmz]${SERVICE}_${ENV}
 BACKUP_DIR=${BACKUP_ROOT}/${DATE}/${DCKR_INSTANCE}/
