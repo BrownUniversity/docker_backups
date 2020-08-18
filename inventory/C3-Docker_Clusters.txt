@@ -1,12 +1,12 @@
 [docker_rogue]
 pdckrdmzcit1.services.brown.edu
 
-[docker_prod_dmz_ucp]
+[docker_prod_ucp]
 pc3mgrcit1.services.brown.edu
 pc3mgrcit2.services.brown.edu
 pc3mgrcit3.services.brown.edu
 
-[docker_prod_dmz_dtr]
+[docker_prod_dtr]
 pc3mgrcit4.services.brown.edu
 
 [docker_prod_dmz]

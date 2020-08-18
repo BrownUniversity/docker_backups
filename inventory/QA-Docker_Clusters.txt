@@ -1,0 +1,8 @@
+[docker_qa_ucp]
+qdckrintcit1.services.brown.edu
+
+[docker_qa_dtr]
+qdckrintcit2.services.brown.edu
+
+[workers]
+qdckrintcit2.services.brown.edu
