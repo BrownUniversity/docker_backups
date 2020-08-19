@@ -5,4 +5,4 @@ qdckrintcit1.services.brown.edu
 qdckrintcit2.services.brown.edu
 
 [workers]
-qdckrintcit2.services.brown.edu
+qdckrintcit3.services.brown.edu
