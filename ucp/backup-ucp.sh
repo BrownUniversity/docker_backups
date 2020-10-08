@@ -14,5 +14,5 @@ docker container run \
   --interactive \
   --name ucp \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  docker/ucp:${UCP_VERSION} backup \
+  mirantis/ucp:${UCP_VERSION} backup \
   --no-passphrase   > ${BACKUP_DIR}/ucp-backup-${DATE}.tar

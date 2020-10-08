@@ -16,8 +16,8 @@ tar -cf ${BACKUP_DIR}/dtr-image-backup-${DATE}.tar \
 # Backup metadata
 docker run --log-driver none -i --rm \
   --env UCP_PASSWORD=${UCP_PASSWORD} \
-  docker/dtr:${DTR_VERSION} backup \
+  mirantis/dtr:${DTR_VERSION} backup \
   --ucp-username ${UCP_ADMIN} \
   --ucp-url ${UCP_URL} \
-  --ucp-ca "$(curl https://${UCP_URL}/ca)" \
+  --ucp-ca "$(curl -k https://${UCP_URL}/ca)" \
   --existing-replica-id ${REPLICA_ID} > ${BACKUP_DIR}/dtr-metadata-${DTR_VERSION}-backup.tar
