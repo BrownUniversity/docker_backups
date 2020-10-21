@@ -22,6 +22,7 @@ pc3intcit1.services.brown.edu
 pc3intcit2.services.brown.edu
 pc3intcit3.services.brown.edu
 pc3intcit4.services.brown.edu
+pc3intcit5.services.brown.edu
 
 [docker_qa_dmz]
 qc3dmzcit1.services.brown.edu
